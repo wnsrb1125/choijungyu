@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--맨처음 화면입니다-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method='post' action='controller.php' id='send'>
+    아이디:   <input type='text' name='ide' id="ide">
+    비번:     <input type='password' name='pw' id="pwd">
+    <input type='button' value='확인' onclick='verify()'>
+</form>
+<script>
+    //값이 안 들어 갔을 시에 뜨는 script입니다
+    function verify() {
+        var id = document.getElementById('ide').value;
+        var pw = document.getElementById('pwd').value;
+        if(id == '' || pw == '') {
+            alert("아이디나 비밀번호를 입력해주세요!");
+        }
+        else
+        document.getElementById('send').submit();
+    }
+</script>
+</body>
+</html>
+
